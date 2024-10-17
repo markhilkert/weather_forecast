@@ -36,3 +36,6 @@
 
 # Ignore Jetbrains files
 /.idea/
+
+# Ignore rspec state file
+/spec/examples.txt
