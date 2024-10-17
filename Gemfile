@@ -19,7 +19,7 @@ group :development, :test do
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "brakeman", require: false
   gem "rubocop-rails-omakase", require: false # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
-
+  gem "factory_bot"
 end
 
 group :development do
@@ -27,5 +27,9 @@ group :development do
   gem "web-console"
   gem "rack-mini-profiler"
   gem "awesome_print"
+end
+
+group :test do
+  gem "rspec-rails"
 end
 
