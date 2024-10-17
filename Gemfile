@@ -7,6 +7,7 @@ gem "importmap-rails"
 gem "jbuilder"
 
 gem "kredis"
+gem "redis"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
@@ -20,11 +21,11 @@ group :development, :test do
   gem "brakeman", require: false
   gem "rubocop-rails-omakase", require: false # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "factory_bot"
+  gem "dotenv"
 end
 
 group :development do
-  # Use console on exceptions pages [https://github.com/rails/web-console]
-  gem "web-console"
+  gem "web-console"   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "rack-mini-profiler"
   gem "awesome_print"
 end

@@ -20,10 +20,14 @@ Rails.application.configure do
   # Configure public file server for tests with Cache-Control for performance.
   config.public_file_server.headers = { "Cache-Control" => "public, max-age=#{1.hour.to_i}" }
 
-  # Show full error reports and disable caching.
+  # Show full error reports.
   config.consider_all_requests_local = true
-  config.action_controller.perform_caching = false
-  config.cache_store = :null_store
+
+
+  # config.cache_store = :null_store
+  # Enable cache store in test, as we'll be using redis to store objects
+  config.cache_store = :redis_cache_store, { url: ENV['VALKEY_URL'] }
+  config.action_controller.perform_caching = true
 
   # Render exception templates for rescuable exceptions and raise for other exceptions.
   config.action_dispatch.show_exceptions = :rescuable
