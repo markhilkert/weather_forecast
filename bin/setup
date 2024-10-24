@@ -1,4 +1,4 @@
-#!/Users/armk/.rbenv/shims/ruby
+#!/usr/bin/env ruby
 require "fileutils"
 
 APP_ROOT = File.expand_path("..", __dir__)
