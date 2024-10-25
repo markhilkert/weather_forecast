@@ -7,6 +7,14 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <nav class="bg-white border-gray-200 py-4 pl-10">
+      <ul class="flex">
+        <li class="mr-6">
+          <a class="text-2xl font-semibold text-black hover:text-blue-800" href="/">Home</a>
+        </li>
+      </ul>
+    </nav>
+
     <%= yield :head %>
 
     <link rel="manifest" href="/manifest.json">

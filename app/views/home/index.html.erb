@@ -1,4 +1,30 @@
-<div class="bg-white rounded-lg items-center justify-around">
-  <h1>Weather App</h1>
-  <i class="fa-solid fa-sun"></i>
+<div class="bg-white rounded-lg items-center justify-around min-w-[480px] min-h-[250px]">
+  <turbo-frame id="weather-forecast">
+
+    <h2 class="text-3xl mb-8 mt-6 mx-5 justify-center text-center">What's the weather like today?</h2>
+
+    <%= form_with url: "/forecast", method: :get, class: "justify-around" do |form| %>
+      <div class="space-y-12 mb-5">
+        <div class="mt-5 flex justify-center text-center">
+          <div class="px-5">
+            <div class="mt-2 flex items-center">
+              <%= form.label :street_address, "Street Address", class: "block text-lg font-medium leading-6 text-gray-900 mx-2" %>
+              <div class="flex rounded-md shadow-sm w-36 ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                <%= form.text_field :forecast_street_address, name: "forecast[street_address]", autocomplete: "street-address", class: "block flex-1 border-0 bg-transparent py-1.5 pl-3 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6", placeholder: "452 Main St." %>
+              </div>
+            </div>
+            <div class="mt-2 flex items-center">
+              <%= form.label :zipcode, "US Zip Code", class: "block text-lg font-medium leading-6 text-gray-900 mx-2" %>
+              <div class="flex rounded-md shadow-sm w-36 ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                <%= form.text_field :forecast_zipcode, name: "forecast[zipcode]", autocomplete: "zip-code", class: "block flex-1 border-0 bg-transparent py-1.5 pl-3 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6", placeholder: "94134" %>
+              </div>
+            </div>
+            <div class="mt-3">
+              <%= form.submit "Find Out", class: "ded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </turbo-frame>
 </div>

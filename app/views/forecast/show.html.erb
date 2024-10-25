@@ -1,0 +1,27 @@
+<turbo-frame id="weather-forecast">
+  <% if @forecast.invalid? %>
+    <h2 class="text-3xl mb-8 mt-6 mx-5 justify-center min-w-[480px] text-center"> Invalid Address </h2>
+    <p class="mx-4 text-lg" >Please return home and try again</p>
+  <% else %>
+    <h2 class="text-3xl mb-8 mt-6 mx-5 justify-center min-w-[480px] text-center">Weather in <%= @forecast.zipcode %></h2>
+    <div class="space-y-12">
+      <div class="mt-5 flex items-center justify-center">
+        <div class="px-5 flex-col">
+          <div class="flex flex-col justify-center items-center mb-4">
+            <span class="my-2"> <i class="fa-3x <%= @forecast.current_conditions_icon_classes %>"></i> </span>
+            <span class="text-xl"> <%= @forecast.current_temp %> °F </span>
+          </div>
+          <div class="flex">
+            <% @forecast.extended_forecast.each do |daily_forecast| %>
+              <div class="flex flex-col rounded-lg items-center justify-around m-3">
+                <span class="text-lg"><%= daily_forecast.day_of_the_week %></span>
+                <span> <i class="fa-lg <%= daily_forecast.conditions_icon_classes %>"></i> </span>
+                <span class="text-sm mt-2"> <%= number_with_precision(daily_forecast.min_temp, precision: 1) %></span>
+                <span class="text-sm"> <%= number_with_precision(daily_forecast.max_temp, precision: 1) %></span>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+  <% end %>
+</turbo-frame>
