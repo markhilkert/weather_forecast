@@ -80,6 +80,16 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 
+  # Flush DB before each test and after the test suite finishes
+  # Note that we are using the same database for test and development
+  config.before(:each) do
+    Kredis.redis.flushdb
+  end
+
+  config.after(:suite) do
+    Kredis.redis.flushdb
+  end
+
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
 =begin

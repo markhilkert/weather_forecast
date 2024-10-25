@@ -5,20 +5,20 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version: 3.3.5
 
 * System dependencies
+  * Redis or Valkey
 
 * Configuration
 
 * Database creation
+  * Note here that we'll use the same DB for test and development, since all use for time-limited caching and will not remain permanently
 
 * Database initialization
 
 * How to run the test suite
+  * bundle exec rspec
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Running locally: `bin/dev`
+  * Secrets (API Key)
