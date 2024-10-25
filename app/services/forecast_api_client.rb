@@ -1,3 +1,5 @@
+# API Docs: https://www.visualcrossing.com/resources/documentation/weather-api/timeline-weather-api/
+#
 class ForecastApiClient
   BASE_URL = "https://weather.visualcrossing.com"
   EXTENDED_FORECAST_ENDPOINT = 'VisualCrossingWebServices/rest/services/timeline'

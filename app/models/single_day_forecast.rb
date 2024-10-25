@@ -2,6 +2,7 @@ class SingleDayForecast
   attr_reader :current_temp, :date, :min_temp, :max_temp, :conditions_icon_name
 
   # Converts API Conditions to font-awesome classes for icons
+  # https://www.visualcrossing.com/resources/documentation/weather-api/defining-icon-set-in-the-weather-api/
   CONDITIONS_ICON_MAP = {
     "snow" => "fa-solid fa-cloud",
     "rain" => "fa-solid fa-cloud-rain",

@@ -16,7 +16,7 @@
             <div class="mt-2 flex items-center">
               <%= form.label :zipcode, "US Zip Code", class: "block text-lg font-medium leading-6 text-gray-900 mx-2" %>
               <div class="flex rounded-md shadow-sm w-36 ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
-                <%= form.text_field :forecast_zipcode, name: "forecast[zipcode]", autocomplete: "zip-code", class: "block flex-1 border-0 bg-transparent py-1.5 pl-3 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6", placeholder: "94134" %>
+                <%= form.text_field :forecast_zipcode, name: "forecast[zipcode]", autocomplete: "zip-code", class: "block flex-1 border-0 bg-transparent py-1.5 pl-3 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6", placeholder: "94134", pattern: ForecastProcessor::USA_ZIPCODE_REGEX, title: "5 or 9 digit US Zipcode (e.g., 94134 or 94134-1350)" %>
               </div>
             </div>
             <div class="mt-3">
