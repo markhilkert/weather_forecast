@@ -1,7 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+weather_forecast is a simple app to check the weather forecast in your area.
+The backend is built with Ruby on Rails, and the frontend uses [Tailwind CSS](https://tailwindcss.com/).
+
+The weather forecast are sourced from [Visual Crossing's weather API](https://www.visualcrossing.com/weather-api).
+weather_forecast runs on the free tier, so at maximum it can handle 1000 requests per day.
+
+
+
 
 Things you may want to cover:
 
