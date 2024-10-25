@@ -5,6 +5,7 @@ gem "sprockets-rails"
 gem "puma", ">= 5.0"
 gem "importmap-rails"
 gem "jbuilder"
+gem "turbo-rails"
 
 gem "kredis"
 gem "redis"
