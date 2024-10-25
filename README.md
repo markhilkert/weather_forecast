@@ -75,6 +75,7 @@ bin/rails credentials:edit
 And adding the API key:
 
 ```yml
+visual_crossing_api_key: YOUR_API_KEY_HERE
 ```
 
 ### MacOS valkey installation
