@@ -13,6 +13,8 @@ gem "tailwindcss-rails"
 gem "sass-rails"
 gem "font-awesome-sass"
 
+gem "faraday"
+
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
@@ -24,7 +26,6 @@ group :development, :test do
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "brakeman", require: false
   gem "rubocop-rails-omakase", require: false # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
-  gem "factory_bot"
   gem "dotenv"
 end
 
@@ -36,5 +37,6 @@ end
 
 group :test do
   gem "rspec-rails"
+  gem "webmock"
 end
 
