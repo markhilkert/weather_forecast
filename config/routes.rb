@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
   root "home#index"
-  get 'forecast', to: 'forecast#show'
+  get "forecast", to: "forecast#show"
 end

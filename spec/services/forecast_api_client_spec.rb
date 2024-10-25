@@ -58,7 +58,7 @@ RSpec.describe ForecastApiClient do
         key = "some-key"
         value = "some-value"
 
-        actual_parameters = api_client.send(:build_query_param_string, additional_params: {key => value})
+        actual_parameters = api_client.send(:build_query_param_string, additional_params: { key => value })
         expected_parameters = "unitGroup=us&key=fake-api-key&contentType=json&some-key=some-value"
 
         expect(actual_parameters).to eq(expected_parameters)

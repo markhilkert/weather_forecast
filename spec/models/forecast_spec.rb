@@ -18,12 +18,12 @@ RSpec.describe Forecast do
       {
         "currentTemp"=>55.3,
         "days"=> [
-          {"conditionsIcon"=>"clear-day", "date"=>"2024-10-24", "maxTemp"=>74.9, "minTemp"=>52.8},
-          {"conditionsIcon"=>"partly-cloudy-day", "date"=>"2024-10-25", "maxTemp"=>74.9, "minTemp"=>54.1},
-          {"conditionsIcon"=>"partly-cloudy-day", "date"=>"2024-10-26", "maxTemp"=>72.1, "minTemp"=>53.0},
-          {"conditionsIcon"=>"rain", "date"=>"2024-10-27", "maxTemp"=>69.5, "minTemp"=>58.6},
-          {"conditionsIcon"=>"clear-day", "date"=>"2024-10-28", "maxTemp"=>66.5, "minTemp"=>55.1},
-          {"conditionsIcon"=>"clear-day", "date"=>"2024-10-29", "maxTemp"=>66.1, "minTemp"=>53.3}],
+          { "conditionsIcon"=>"clear-day", "date"=>"2024-10-24", "maxTemp"=>74.9, "minTemp"=>52.8 },
+          { "conditionsIcon"=>"partly-cloudy-day", "date"=>"2024-10-25", "maxTemp"=>74.9, "minTemp"=>54.1 },
+          { "conditionsIcon"=>"partly-cloudy-day", "date"=>"2024-10-26", "maxTemp"=>72.1, "minTemp"=>53.0 },
+          { "conditionsIcon"=>"rain", "date"=>"2024-10-27", "maxTemp"=>69.5, "minTemp"=>58.6 },
+          { "conditionsIcon"=>"clear-day", "date"=>"2024-10-28", "maxTemp"=>66.5, "minTemp"=>55.1 },
+          { "conditionsIcon"=>"clear-day", "date"=>"2024-10-29", "maxTemp"=>66.1, "minTemp"=>53.3 } ],
         "zipcode"=>"94134"
       }
     }

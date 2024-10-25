@@ -26,7 +26,7 @@ Rails.application.configure do
 
   # config.cache_store = :null_store
   # Enable cache store in test, as we'll be using redis to store objects
-  config.cache_store = :redis_cache_store, { url: ENV['VALKEY_URL'] }
+  config.cache_store = :redis_cache_store, { url: ENV["VALKEY_URL"] }
   config.action_controller.perform_caching = true
 
   # Render exception templates for rescuable exceptions and raise for other exceptions.

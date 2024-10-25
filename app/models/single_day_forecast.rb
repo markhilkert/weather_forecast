@@ -25,7 +25,7 @@ class SingleDayForecast
 
   # Return first 3 letters of the day of the week
   def day_of_the_week
-    Date.parse(date).strftime('%A').slice(0,3)
+    Date.parse(date).strftime("%A").slice(0, 3)
   end
 
   def conditions_icon_classes

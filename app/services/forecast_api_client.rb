@@ -2,7 +2,7 @@
 #
 class ForecastApiClient
   BASE_URL = "https://weather.visualcrossing.com"
-  EXTENDED_FORECAST_ENDPOINT = 'VisualCrossingWebServices/rest/services/timeline'
+  EXTENDED_FORECAST_ENDPOINT = "VisualCrossingWebServices/rest/services/timeline"
 
   class ApiError; end
 
