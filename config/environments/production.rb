@@ -73,6 +73,9 @@ Rails.application.configure do
   # Don't log any deprecations.
   config.active_support.report_deprecations = false
 
+  # TODO: set action mailer default url options
+  # config.action_mailer.default_url_options = { host: 'REPLACE_ME', port: 3000 }
+
   # Enable DNS rebinding protection and other `Host` header attacks.
   # config.hosts = [
   #   "example.com",     # Allow requests from example.com
