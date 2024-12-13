@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Backend and Rails
-gem "rails", "~> 7.2.1", ">= 7.2.1.1"
+gem "rails", "~> 8.0.1"
 gem "sprockets-rails"
 gem "puma", ">= 5.0"
 gem "importmap-rails"
